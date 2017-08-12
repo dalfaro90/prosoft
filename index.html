@@ -40,8 +40,34 @@
                      <input type="text" maxlength="2" class="form-control" ng-model = "ctrl.model.countryCode" >
                  </div>
              </div>
+             <div class="row form-group">
+                  <div class="col-sm-offset-2 col-sm-4">
+                      <button type="button" class="btn btn-sm btn-primary" ng-click="ctrl.renderCalendars()">Render a calendar</button>
+                  </div>
+              </div>
 
-             <pre>{{ctrl.model | json}}</pre>
+              <div class="calendar" ng-if="ctrl.calendar.length">
+                  <div class="container-week header-week">
+                      <div class="item-day">S</div>
+                      <div class="item-day">M</div>
+                      <div class="item-day">T</div>
+                      <div class="item-day">W</div>
+                      <div class="item-day">T</div>
+                      <div class="item-day">F</div>
+                      <div class="item-day">S</div>
+                  </div>
+                  <div ng-repeat="month in ctrl.calendar">
+                      <div class="header-month">{{month.name}}</div>
+                      <div class="container-week" ng-repeat="week in month.weeks">
+                          <div class="item-day {{day.className}}" ng-repeat="day in week.days">
+                              {{day.day}}
+                          </div>
+                      </div>
+                      <br>
+                </div>
+            </div>
+
+
       </form>
   </body>
 </html>

@@ -1,0 +1,40 @@
+.container-week {
+  display: flex; /* or inline-flex */
+}
+
+.item-day {
+  flex: 1;
+  border: solid 1px white;
+  text-align: center;
+}
+
+
+.calendar {
+    position: relative;
+    left: 10%;
+    width: 200;
+}
+
+.header-week {
+
+}
+
+.header-month {
+    background: lightgreen;
+    text-align: center;
+}
+
+.empty-day {
+    background: gray;
+}
+.holiday{
+    background: orange;
+}
+
+.is-weekend {
+    background: yellow;
+}
+
+.workday {
+    background: lightgreen;
+}
