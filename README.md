@@ -1,1 +1,1 @@
-# prosoft_excercise
+# Prosoft programming exercise
